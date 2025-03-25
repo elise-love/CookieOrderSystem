@@ -1,0 +1,11 @@
+├── CookieOrderSystem.py    # 主要 Python 程式
+├── data/
+│     ├── cookies.xlsx      # 存放餅乾資料
+│     └── orders.xlsx       # 存放訂單資料
+├── templates/
+│     └── index.html        # 前端 HTML 模板
+└── static/
+      ├── style.css         # 前端 CSS
+      ├── script.js         # 前端 JS
+      └── images/           # 餅乾圖片
+

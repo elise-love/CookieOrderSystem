@@ -1,0 +1,31 @@
+body{
+    font-family: Arial, san0serif;
+    margin: 20px;
+}
+
+.cookie-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cookie-item{
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    width: 150px;
+    cursor: move;
+}
+
+.cookie-itm img{
+    width: 100px;
+    height: 100px;
+}
+
+#drop-box{
+    border: 2px dashed #888;
+    padding: 30px;
+    margin-top: 30px;
+    text-align: center;
+    min-height:150px;
+}

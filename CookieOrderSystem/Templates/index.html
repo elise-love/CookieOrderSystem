@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-TW"> <!--tradional Chinese taiwan-->
+<head>
+    <meta charset="UTF-8" />
+    <title>餅乾系統</title> <!--webpage title-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+    <!--link to external css stylesheet-->
+    <!--url_for: dynamically generates the correct url for static files, framework from flask-->
+</head>
+
+<body>
+    <h1>餅乾系統</h1>
+    <div class="cookie-container">
+
+        <!--dynamically load in cookie info-->
+        {% for cookie in cookies %}
+        <!--loop through each cookie in the cookies list-->
+
+        <div class="cookie-item" draggable="true" data-id="{{ cookie['ID']}}" data-price="{{ cookie['價格']}}">
+            <img src="{{ url_for('static', filename='images/' ~cookie['圖片檔名']) }}" alt="{{cookie['名稱'] }}">
+            <!--the src attribute: dynamically using url_for tp point to the correct image file located in the static/images directory-->
+
+            <p>{{ cookie['名稱'] }} - ${{cookie['價格'] }}</p>
+            <!--display the cookie name and price-->
+            
+            <!-- 可加入數量選擇器 -->
+            <input type="number" min="0" value="1" class="quantity">
+        </div>
+        {% endfor %}
+        <!--ends the for-loop-->
+
+    </div>
+
+    <!--drag box-->
+    <div id="drop-box">
+        <p>將喜歡的餅乾拖曳進來或直接選擇數量</p>
+    </div>
+
+    <!--confirm order-->
+    <button id="confirm-order">確定訂單</button>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <!--link to external JS file names script.js located in static folder-->
+
+</body>
+
+
+</html>
