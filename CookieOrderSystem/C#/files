@@ -4,6 +4,9 @@
 │     └── orders.xlsx       # 存放訂單資料
 ├── templates/
 │     └── index.html        # 前端 HTML 模板
+│       ├── classic_cocoa.png
+│       ├── matcha.png
+│       └── rose_love.png
 └── static/
       ├── style.css         # 前端 CSS
       ├── script.js         # 前端 JS

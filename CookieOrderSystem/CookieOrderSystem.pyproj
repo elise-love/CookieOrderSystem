@@ -34,6 +34,9 @@
     <Content Include="C#\files" />
     <Content Include="Data\Cookie.xlsx" />
     <Content Include="Data\orders.xlsx" />
+    <Content Include="Static\images\classic_cocoa.png" />
+    <Content Include="Static\images\classic_matcha.png" />
+    <Content Include="Static\images\rose_love.png" />
     <Content Include="Static\script.js" />
     <Content Include="Static\style.css" />
     <Content Include="Templates\index.html" />

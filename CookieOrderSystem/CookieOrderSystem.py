@@ -32,10 +32,11 @@ def read_cookies():
     for row in ws.iter_rows(min_row=2):
         row_values = [cell.value for cell in row]
         cookie = {
-            "ID": row[0],
-            "名稱": row[1],
-            "圖片檔名": row[2],
-            "價格": row[3]
+            "ID": row[0].value,
+            "名稱": row[1].value,
+            "圖片檔名": row[2].value.strip(),
+            "價格": row[3].value
+            #用 .value 才能取出裡面真正的字串、數字
         }
         cookies.append(cookie)
         #每列資料組成字典，再加入cookies清單中
