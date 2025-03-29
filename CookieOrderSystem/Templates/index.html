@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <h1>餅乾超好粗餅乾餅乾餅乾乾乾</h1>
+    <h1>🍪餅乾超好粗餅乾餅乾餅乾乾乾🍪</h1>
     <div class="cookie-container">
 
         <!--dynamically load in cookie info-->
@@ -20,11 +20,15 @@
             <img src="{{ url_for('static', filename='images/' ~cookie['圖片檔名']) }}" alt="{{cookie['名稱'] }}">
             <!--the src attribute: dynamically using url_for tp point to the correct image file located in the static/images directory-->
 
-            <p>{{ cookie['名稱'] }} - ${{cookie['價格'] }}</p>
+            <p class="cookie-name">{{ cookie['名稱'] }} - ${{cookie['價格'] }}</p>
             <!--display the cookie name and price-->
             
             <!-- 可加入數量選擇器 -->
-            <input type="number" min="0" value="1" class="quantity">
+            <select class="quantity-selector" id="quantity-{{ cookie['ID']}}">
+                {%for i in range(0,25)%}
+                <option value="{{i}}">{{i}}</option>
+                {% endfor %}
+            </select>
         </div>
         {% endfor %}
         <!--ends the for-loop-->
