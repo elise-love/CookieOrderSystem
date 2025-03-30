@@ -37,6 +37,7 @@ h1 {
     gap: 80px;
     justify-content: center;
     border-width: 2px;
+    margin-bottom: 0px;
 }
 
 .cookie-container:hover {
@@ -93,32 +94,54 @@ h1 {
 }
 
 #drop-box {
-    border: 2px dashed #888;
-    padding: 30px;
-    margin-top: 70px;
-    text-align: center;
-    min-height: 150px;
-    height: 200px;
-    width: 80%;
-    border-radius: 10px;
-    background-color: #f5f0e6;
-    color: #333;
-    background-color: #fff8eb;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px;
+    min-height: none;
+    width: 1000px;
+    height: 1000px;
+    background-color: transparent;
+    border: none;
+    opacity: 0.9;
 }
 
-  #drop-box:hover {
-      background-color: #f7e2c3;
-    }
 
+#custom-drop-box{
+    width: 100%;
+    height: auto;
+    max-width: none;
+    object-fit: contain; /*scale without distortion*/
+    pointer-events:none; /*image doesn't interfere with droopping*/
+}
+
+#drop-box p{
+    position: absolute;
+    font-size: 24px;
+    color: #5c4b4b;
+    font-family: 'Comic Sans MS',cursive;
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+#drop-box:hover p {
+    background-color: rgba(255, 238, 210, 0.95);
+}
 
 #confirm-order {
-    margin-top: 40px;
+    margin-top: 20px;
+    margin-bottom: 100px;
     padding: 12px 30px;
-    font-size: 18px;
+    height: 80px;
+    width: 200px;
+    font-size: 30px;
     background-color: #806060;
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 30px;
     cursor: pointer;
     box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
     transition: background-color 0.3s ease, transform 0.2s ease;
